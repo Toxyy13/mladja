@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styletest.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Testimonials</h1>
+
+        <div class="container">
+            <div class="indicator">
+                <span class="btn active"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testimonial">
+                    <div class="slide-row" id="slide">
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Sarah Samona is an American internet
+                            enterpreneur and media propietor, and investor.
+                            She is the founder of the multy-national technology
+                            company Zara.
+                            <h3>Sarah</h3>
+                            <p>Zara Inc.</p>
+                        </p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/testimonials-2.jpg" alt="Sarah">
+                    </div>
+                 </div>
+                 <div class="slide-col">
+                    <div class="user-text">
+                        <p>Sarah Samona is an American internet
+                            enterpreneur and media propietor, and investor.
+                            She is the founder of the multy-national technology
+                            company Zara.
+                            <h3>Sarah</h3>
+                            <p>Zara Inc.</p>
+                        </p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/testimonials-1.jpg" alt="Sarah">
+                    </div>
+                 </div>
+                 <div class="slide-col">
+                    <div class="user-text">
+                        <p>Sarah Samona is an American internet
+                            enterpreneur and media propietor, and investor.
+                            She is the founder of the multy-national technology
+                            company Zara.
+                            <h3>Sarah</h3>
+                            <p>Zara Inc.</p>
+                        </p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/testimonials-3.jpg" alt="Sarah">
+                    </div>
+                 </div>
+                 <div class="slide-col">
+                    <div class="user-text">
+                        <p>Sarah Samona is an American internet
+                            enterpreneur and media propietor, and investor.
+                            She is the founder of the multy-national technology
+                            company Zara.
+                            <h3>Sarah</h3>
+                            <p>Zara Inc.</p>
+                        </p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/testimonials-4.jpg" alt="Sarah">
+                    </div>
+                 </div>
+                    </div>
+            </div>
+        </div>
+
+      
+    </div>
+
+<script>
+    var btn = document.getElementsByClassName("btn");
+    var slide = document.getElementById("slide");
+
+    btn[0].onclick = function(){
+        slide.style.transform = "translateX(0px)";
+        for(let i=0;i<4;i++){
+            btn[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+
+    btn[1].onclick = function(){
+        slide.style.transform = "translateX(-800px)";
+        for(let i=0;i<4;i++){
+            btn[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+
+    btn[2].onclick = function(){
+        slide.style.transform = "translateX(-1600px)";
+        for(let i=0;i<4;i++){
+            btn[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+
+    btn[3].onclick = function(){
+        slide.style.transform = "translateX(-2400px)";
+        for(let i=0;i<4;i++){
+            btn[i].classList.remove("active");
+        }
+        this.classList.add("active");
+    }
+
+</script>
+
+</body>
+</html>
