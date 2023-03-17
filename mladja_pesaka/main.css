@@ -144,3 +144,121 @@ color:#0d42ff;
   font-size:smaller;
   height:100%;
 }
+
+/* Style for the "Features" section */
+.features {
+  display: block;
+  padding: 60px 0;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+.seccontainer{
+  text-align:center;
+}
+.seccontainer h2{
+  margin-top:20px;
+}
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-item {
+  text-align: center;
+  margin: 20px;
+}
+
+.features-item h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.features-item p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Style for the "Pricing" section */
+.pricing {
+  display: block;
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-item {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+
+.pricing-item h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.pricing-item p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* style for pricing */
+
+.pricingcont{
+  width:100%;
+  display:flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.section-header{
+  height:50px;
+}
+/* Style for the "Testimonials" section */
+.testimonials {
+  display: block;
+  padding: 60px 0;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials-item {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin: 20px;
+}
+
+.testimonials-item h3 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.testimonials-item p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.testimonials-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
