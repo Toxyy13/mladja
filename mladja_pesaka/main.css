@@ -5,14 +5,14 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style:none;
-  color:white;
+  /* color:white; */
   
 font-family: 'Open Sans', sans-serif;
 }
 header{
 width:100%;
 color:white;
-position:fixed;
+position:absolute;
 top:0;
 }
 h1{
@@ -29,12 +29,66 @@ h1{
   padding:10px;
   border-radius:5px;
 }
-.navbar ul{
-  display:flex;
-  gap:20px;
-  margin-right:40px;
-  padding:30px;
-  font-size:small;
+/* Style the hamburger button */
+.hamburger {
+  display: block;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+/* Style the menu */
+.menu {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #263d905b;
+  color:white;
+  border-radius:5px;
+  position: absolute;
+  top: 58px;
+  right: 0;
+  max-width:30%;
+  z-index: 1;
+}
+
+/* Style the menu items */
+.menu li {
+  display: block;
+}
+
+/* Style the links inside the menu items */
+.menu li a {
+  display: block;
+  color:white;
+  text-align: left;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+.menu li a:hover{
+  color:rgb(116, 165, 208);
+}
+
+
+/* Change the background color of the active link */
+.menu li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Style the hamburger icon */
+.hamburger span {
+  float: right;
+}
+
+/* Show the menu when the hamburger button is clicked */
+.hamburger-menu .hamburger:focus + .menu 
+{
+  display: block;
 }
 .hero{
   background-image: url("img/hero-bg.png");
