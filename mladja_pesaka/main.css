@@ -1,23 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 *{
   padding:0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style:none;
-  /* color:white; */
-  
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Special Elite', cursive;
+  scroll-behavior: smooth;
 }
 header{
 width:100%;
 color:white;
-position:absolute;
+position:fixed;
 top:0;
+background-color:#1051A5;
+height:100px;
 }
 h1{
-  padding:50px 0 0 100px;
-  font-size:medium;
+  padding:25px;
+  font-size:2rem;
+  color:white;
+  text-align:center;
+
 }
 .container{
   width:100%;
@@ -34,10 +38,11 @@ h1{
   display: block;
   background-color: transparent;
   color: white;
-  font-size: 16px;
   border: none;
   cursor: pointer;
-  padding: 12px 20px;
+  padding: 25px;
+  font-weight: bold;
+  font-size:2rem;
 }
 
 /* Style the menu */
@@ -46,7 +51,7 @@ h1{
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #263d905b;
+  background-color: #1051A5;
   color:white;
   border-radius:5px;
   position: absolute;
@@ -68,6 +73,7 @@ h1{
   text-align: left;
   padding: 12px 20px;
   text-decoration: none;
+  font-size:2rem;
 }
 .menu li a:hover{
   color:rgb(116, 165, 208);
@@ -90,61 +96,105 @@ h1{
 {
   display: block;
 }
+
 .hero{
   background-image: url("img/hero-bg.png");
-  background-size:cover;
+  background-size:100% 80%;
   background-position:center;
   background-repeat: no-repeat;
   height:60vh;
+  background-attachment: fixed;
 }
 .herocntmain , .herocnt , .container2{
   width:100%;
   height:100%;
   color:black;
 }
-.herocntmain form{
+.forma{
 background-color:white;
-max-width:40%;
-height:50px;
-border-radius:5px;
+width:50%;
+height:75px;
+border-radius:10px;
 text-align:center;
 display:flex;
 align-items:center;
 justify-content: space-between;
-
+padding:10px;
+margin:auto;
 }
 .herocntmain{
   display:grid;
   align-items:center;
-  padding:50px 0 0 100px;
-}
-.herocntmain form input{
-  border:0;
-  
-}
-.herocntmain a{
-color:#0d42ff;
-}
-.btna{
-  
-  font-size:small;
-  height:40px;
-  display:flex;
-}
-.btna button{
-  color:white;
-  background-color:#0d42ff;
-  border:0;
-  border-radius:5px;
-  padding:5px;
-}
-.btna a{
-  width:70px;
-  text-align:center;
-  font-size:smaller;
-  height:100%;
 }
 
+.typing{
+ padding:10px;
+ margin-left:10px;
+ font-size:large;
+ width:35%;
+ border:0;
+}
+.typing:active{
+  border:0; 
+}
+
+
+.bt{
+  width:70px;
+  text-align:center;
+  font-size:1.3em;
+  height:100%;
+  color:white;
+  background: #0d42ff;
+  padding:15px;
+  border-radius:10px;
+  transition-duration: 1s;
+}
+.bt:hover{
+  background:rgb(0, 191, 255);
+  color:black;
+}
+.indicnt{
+  display:flex;
+  flex-wrap: wrap;
+  width:50%;
+  justify-content: space-between;
+  margin:auto;
+  text-align: center;
+  
+}
+.leftf{
+  
+  animation:left 1.5s ease-out;
+}
+.rightf{
+  animation:right 1.5s ease-out;
+}
+@keyframes left{
+  0%{
+    transform:translateX(-300%);
+    opacity:0;
+  }
+  100%{
+    transform:translateX(0);
+    opacity:1;
+  }
+}
+@keyframes right{
+  0%{
+    transform:translateX(300%);
+    opacity:0;
+  }
+  100%{
+    transform:translateX(0);
+    opacity:1;
+  }
+}
+.indi{
+  color:white;
+  font-size:2em;
+  font-weight: bold;
+}
 /* Style for the "Features" section */
 .features {
   display: block;
