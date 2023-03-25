@@ -312,3 +312,53 @@ margin:auto;
   border-radius: 50%;
   margin-bottom: 10px;
 }
+
+.why{
+  background:#1051A5;
+  padding:30px;
+  font-size:2em;
+  color:white;
+  margin:50px 20px;
+  border-radius: 50px;
+ 
+}
+.why h3{
+  text-align:center;
+  animation:left 
+}
+.ben{
+  width:100%;
+}
+.sextion-header{
+  width:100%;
+  justify-content: center;
+}
+.section-header h2{
+  text-align: center;
+  background:#1051A5;
+  padding:20px;
+  font-size:2em;
+  
+}
+.servwrap{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content: space-around;
+  margin:50px 0;
+}
+.servitem{
+  width:20%;
+  font-size:larger;
+}
+section{
+  width:100%
+}
+.services{
+  width:100%;
+  
+}
+.servitem img{
+  width:100%;
+}
