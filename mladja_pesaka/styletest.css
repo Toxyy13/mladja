@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
 }
-/* 
-body{
-    background-image: url('imagesvac/imagedest.jpg');
-    background-size: cover;
-    opacity: 0.9;
-} */
 
-.hero{
+body{
+    background:#5c8af7;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.testis-hero{
     background-image: url('imagesvac/imagedest.jpg');
     /* background: lightblue; */
     height: 100vh;
@@ -18,20 +18,20 @@ body{
     /* opacity: 0.5; */
 }
 
-.hero h1{
+.testis-hero h1{
     text-align: center;
     padding-top: 80px;
     font-size: 40px;
     color: blue;
 }
 
-.slide-row{
+.testis-slide-row{
     display: flex;
     width: 3200px;
     transition: 1.0s;
 }
 
-.slide-col{
+.testis-slide-col{
     width: 800px;
     height: 400px;
     position: relative;
@@ -39,7 +39,7 @@ body{
    
 }
 
-.user-img{
+.testis-user-img{
     position: absolute;
     top: 0;
     right: 0;
@@ -51,7 +51,7 @@ body{
     border-radius: 50%;
 }
 
-.user-text{
+.testis-user-text{
     background: #2d3a59;
     width: 420px;
     height: 270px;
@@ -66,18 +66,18 @@ body{
     z-index: 2;
 }
 
-.user-text p{
+.testis-user-text p{
     font-size:  18px;
     line-height: 24px;
 }
 
 
-.user-text h3{
+.testis-user-text h3{
     margin: 35px 0 5px;
     color: #fff;
 }
 
-.container{
+.testis-container{
     width: 800px;
     height: 400px;
     position: absolute;
@@ -86,14 +86,14 @@ body{
     transform: translate(-50%, -50%);
 }
 
-.indicator{
+.testis-indicator{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: -50px;
 }
 
-.btn{
+.testis-btn{
     display: inline-block;
     height: 15px;
     width: 15px;
@@ -104,12 +104,12 @@ body{
     transition: 1.0s;
 }
 
-.active{
+.testis-active{
     width: 45px;
 }
 
 
-.testimonial{
+.testis-testimonial{
     width:100%;
     height: 100%;
     overflow: hidden;

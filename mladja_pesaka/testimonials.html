@@ -9,20 +9,20 @@
 </head>
 <body>
 
-    <div class="hero">
+    <div class="testis-hero">
         <h1>Testimonials</h1>
 
-        <div class="container">
-            <div class="indicator">
-                <span class="btn active"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
-                <span class="btn"></span>
+        <div class="testis-container">
+            <div class="testis-indicator">
+                <span class="testis-btn active"></span>
+                <span class="testis-btn"></span>
+                <span class="testis-btn"></span>
+                <span class="testis-btn"></span>
             </div>
-            <div class="testimonial">
-                    <div class="slide-row" id="slide">
-                <div class="slide-col">
-                    <div class="user-text">
+            <div class="testis-testimonial">
+                    <div class="testis-slide-row" id="slide">
+                <div class="testis-slide-col">
+                    <div class="testis-user-text">
                         <p>Sarah Samona is an American internet
                             enterpreneur and media propietor, and investor.
                             She is the founder of the multy-national technology
@@ -31,12 +31,12 @@
                             <p>Zara Inc.</p>
                         </p>
                     </div>
-                    <div class="user-img">
-                        <img src="images/testimonials-2.jpg" alt="Sarah">
+                    <div class="testis-user-img">
+                        <img src="img/testimonials/testimonials-2.jpg" alt="Sarah">
                     </div>
                  </div>
-                 <div class="slide-col">
-                    <div class="user-text">
+                 <div class="testis-slide-col">
+                    <div class="testis-user-text">
                         <p>Sarah Samona is an American internet
                             enterpreneur and media propietor, and investor.
                             She is the founder of the multy-national technology
@@ -45,12 +45,12 @@
                             <p>Zara Inc.</p>
                         </p>
                     </div>
-                    <div class="user-img">
-                        <img src="images/testimonials-1.jpg" alt="Sarah">
+                    <div class="testis-user-img">
+                        <img src="img/testimonials/testimonials-1.jpg" alt="Sarah">
                     </div>
                  </div>
-                 <div class="slide-col">
-                    <div class="user-text">
+                 <div class="testis-slide-col">
+                    <div class="testis-user-text">
                         <p>Sarah Samona is an American internet
                             enterpreneur and media propietor, and investor.
                             She is the founder of the multy-national technology
@@ -59,12 +59,12 @@
                             <p>Zara Inc.</p>
                         </p>
                     </div>
-                    <div class="user-img">
-                        <img src="images/testimonials-3.jpg" alt="Sarah">
+                    <div class="testis-user-img">
+                        <img src="img/testimonials/testimonials-3.jpg" alt="Sarah">
                     </div>
                  </div>
-                 <div class="slide-col">
-                    <div class="user-text">
+                 <div class="testis-slide-col">
+                    <div class="testis-user-text">
                         <p>Sarah Samona is an American internet
                             enterpreneur and media propietor, and investor.
                             She is the founder of the multy-national technology
@@ -73,8 +73,8 @@
                             <p>Zara Inc.</p>
                         </p>
                     </div>
-                    <div class="user-img">
-                        <img src="images/testimonials-4.jpg" alt="Sarah">
+                    <div class="testis-user-img">
+                        <img src="img/testimonials/testimonials-4.jpg" alt="Sarah">
                     </div>
                  </div>
                     </div>
@@ -85,39 +85,39 @@
     </div>
 
 <script>
-    var btn = document.getElementsByClassName("btn");
+    var btn = document.getElementsByClassName("testis-btn");
     var slide = document.getElementById("slide");
 
     btn[0].onclick = function(){
         slide.style.transform = "translateX(0px)";
         for(let i=0;i<4;i++){
-            btn[i].classList.remove("active");
+            btn[i].classList.remove("testis-active");
         }
-        this.classList.add("active");
+        this.classList.add("testis-active");
     }
 
     btn[1].onclick = function(){
         slide.style.transform = "translateX(-800px)";
         for(let i=0;i<4;i++){
-            btn[i].classList.remove("active");
+            btn[i].classList.remove("testis-active");
         }
-        this.classList.add("active");
+        this.classList.add("testis-active");
     }
 
     btn[2].onclick = function(){
         slide.style.transform = "translateX(-1600px)";
         for(let i=0;i<4;i++){
-            btn[i].classList.remove("active");
+            btn[i].classList.remove("testis-active");
         }
-        this.classList.add("active");
+        this.classList.add("testis-active");
     }
 
     btn[3].onclick = function(){
         slide.style.transform = "translateX(-2400px)";
         for(let i=0;i<4;i++){
-            btn[i].classList.remove("active");
+            btn[i].classList.remove("testis-active");
         }
-        this.classList.add("active");
+        this.classList.add("testis-active");
     }
 
 </script>
