@@ -8,15 +8,56 @@
   list-style:none;
   font-family: 'Special Elite', cursive;
   scroll-behavior: smooth;
+  overflow-wrap: break-word;
+}
+/* LOADER */
+.loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 98, 255);
+  transition: opacity 1.75s, visibility 1.75s; 
+}
+
+.loader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after{
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: blue;
+  border-radius: 50%;
+ 
+  
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+  from { transform: rotate(0turn) }
+  to { transform: rotate(1turn) }
+}
+body , html{
+  width:100vw;
+  overflow-x:hidden;
 }
 header{
 width:100%;
 color:white;
 position:fixed;
 top:0;
+
 background-color:#0a366e;
 height:100px;
-z-index:100;
+z-index:5;
 }
 h1{
   padding:25px;
@@ -32,7 +73,7 @@ h1{
 }
 .get{
   background-color:#0d42ff;
-  padding:10px;
+  padding:0;
   border-radius:5px;
 }
 /* Style the hamburger button */
@@ -49,7 +90,7 @@ h1{
 
 /* Style the menu */
 .menu {
-  display: none;
+  opacity: 0;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -57,34 +98,29 @@ h1{
   color:white;
   border-radius:0 0 10px 10px;
   position: absolute;
-  top: 58px;
+  
   right: 0;
-  max-width:30%;
-  z-index: 1;position:absolute;
+  width:20%;
+  z-index: 1;
+  position:absolute;
   top:100px;
 }
 
-/* Style the menu items */
-.menu li {
-  display: block;
-}
-
-/* Style the links inside the menu items */
-.menu li a {
+.menu  a {
   display: block;
   color:white;
   text-align: left;
-  padding: 12px 20px;
+  padding:12px 20px;
   text-decoration: none;
   font-size:2rem;
 }
-.menu li a:hover{
+.menu a:hover{
   color:rgb(116, 165, 208);
 }
 
 
 /* Change the background color of the active link */
-.menu li a.active {
+.menu a.active {
   background-color: #4CAF50;
   color: white;
 }
@@ -93,14 +129,13 @@ h1{
 .hamburger span {
   float: right;
 }
-
-/* Show the menu when the hamburger button is clicked */
-.hamburger-menu .hamburger:focus + .menu 
-{
-  display: block;
+.hamburger-menu .hamburger:focus + .menu {
+  opacity: 1;
 }
 
+
 .hero{
+  padding-top:100px;
   background-image: url("img/hero-bg.png");
   background-size:100% 80%;
   background-position:center;
@@ -121,7 +156,6 @@ border-radius:10px;
 text-align:center;
 display:flex;
 align-items:center;
-justify-content: space-between;
 padding:10px;
 margin:auto;
 }
@@ -145,7 +179,7 @@ margin:auto;
 .bt{
   width:70px;
   text-align:center;
-  font-size:1.3em;
+  
   height:100%;
   color:white;
   background: #0d42ff;
@@ -303,7 +337,7 @@ span{
   flex-wrap: wrap;
 }
 .servitem{
-  width:20%;
+  width:400px;
   font-size:larger;
 }
 section{
@@ -350,9 +384,13 @@ section{
   -o-transform:scale(1.2); /* Opera */
   
 }
+
 .card-img{
   overflow:hidden;
 
+}
+.imges{
+  width:50%;
 }
 .img-flu{
   transition:1s ease-in-out;
@@ -609,4 +647,298 @@ section{
   color:#4bc5eb;
   font-weight: bold;
 
+}
+
+/* FAQ STYLE */
+
+.faq{
+  margin-bottom:100px;
+  font-family: 'Special Elite', cursive;
+  background-color: white;
+}
+
+.containerfaq{
+   width: 40%;
+   margin: 0 auto;
+   margin-top: 100px;
+}
+.containerfaq h2{
+  color: rgb(26, 129, 248);
+  letter-spacing: 4px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding: 60px;
+  text-align: left;
+  text-shadow: 1px -1px #767676, -3px 3px #737272,
+-8px 4px 9px #767474;
+  
+}
+
+
+
+.accordion{
+  width: 100%;
+  padding: 15px 20px;
+  font-size:2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 2px solid blue;
+  cursor: pointer;
+  border-radius: 40px;
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+
+
+.accordion h5{
+  font-size: 20px;
+  margin: 0;
+  padding: 3px 0 0 0;
+  font-weight: normal;
+  color: darkblue;
+}
+
+.panel{
+  padding: 0 15px;
+  font-size:2em;
+  text-transform: uppercase;
+  word-spacing: 2px;
+  letter-spacing: 3px;
+  border-left: 1px solid blue;
+  margin-left: 25px;
+  font-size: 14px;
+  text-align: justify;
+  overflow: hidden;
+  max-height: 0px;
+  transition: all 0.3s ease-in;
+
+}
+
+.active{
+  background-color: blue ;
+  color: white;
+
+}
+
+.active h5{
+  color: white;
+
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.activerev{
+  transform: translateY(0px);
+  opacity: 1;
+}
+/* FOOTER STYLE */
+footer{
+  width:100%;
+  background-color:#2d3a59;
+  color:white;
+  padding:50px;
+  position:relative;
+}
+.footerwrap{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+.fttext{
+  max-width:500px;
+}
+.copyright{
+  text-align:center;
+  padding:0;
+  position:absolute;
+  bottom:5px;
+  width:100%;
+}
+.copyright>h4{
+  width:100%;
+  font-size :1.2em;
+  font-family:sans-serif;
+}
+.copyright>h4>span{
+  font-weight: 100;
+  font-size:medium;
+  text-decoration: none;
+  text-transform: none;
+}
+.fab{
+  color:white;
+  padding:5px;
+  border:1px solid white;
+  border-radius:50%;
+}
+.fa-facebook-f{
+  padding:5px 8px;
+}
+.fab:hover{
+  transform: scale(1.3);
+  transition:1s ease-in-out;
+}
+footer a:hover{
+  color:#4bc5eb;
+}
+footer a{
+  color:white;
+}
+footer div{
+  padding:20px;
+}
+/* RESPONSIVE */
+@media (max-width: 1350px) {
+  .forma{
+    width:90%;
+    margin:0 auto;
+  }
+  .btncnt{
+    flex-wrap:wrap;
+  }
+}
+@media (max-width: 850px) {
+  .imges{
+    width:90%;
+    margin:20px auto;
+  }
+  p{
+    width:100%;
+  }
+  .why , .sub , .card-wrapper , .containerfaq{
+    width:100%;
+  }
+  #testimonials{
+    background: #1051A5;
+    width:70%;
+    margin:50px auto;
+    height:70vh;
+    align-items: center;
+    border:solid 15px rgb(15, 61, 77);
+    border-radius:30px;
+    box-shadow: 0 30px 50px rgba(0,0,0, 0.25), 0 20px 20px rgba(0,0,0,0.22);
+  
+  }
+  .testis-hero{
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    /* opacity: 0.5; */
+  }
+  #testimonials h1{
+    color:white;
+    letter-spacing: 5px;
+    font-family: 'Satisfy', cursive;
+    /* padding:50px; */
+  }
+  .testis-hero h1{
+    text-align: center;
+    padding-top: 80px;
+    font-size: 20px;
+    color: blue;
+  }
+  
+  .testis-slide-row{
+    display: flex;
+    width:600%;
+    transition: 1.0s;
+    scroll-behavior: smooth;
+    
+  }
+  
+  .testis-slide-col{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    opacity: 0.9;
+   
+  }
+  
+  .testis-user-img{
+    position: absolute;
+    top: 20%;
+    right: 50%;
+    transform: translateX(50%);
+    height: 150%;
+    
+    border-radius:50%;
+  }
+  
+  .testis-user-img img{
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .testis-user-text{
+    background: #2d3a59;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left:20px;
+    top:100%;
+    border-radius: 50px;
+    color: #d3d4d6;
+    padding: 45px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  
+  .testis-user-text p{
+    font-size:  18px;
+    line-height: 24px;
+  }
+  
+  
+  .testis-user-text h3{
+    margin: 35px 0 5px;
+    color: #fff;
+  }
+  
+  .testis-container{
+    width: 100vw;
+    height: 400px;
+    position: absolute;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+  }
+  
+  .testis-indicator{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+  }
+  
+  .testis-btn{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin: 4px;
+    border-radius: 15px;
+    background: #fff;
+    cursor: pointer;
+    transition: 1.0s;
+  }
+  
+  .testis-active{
+    width: 45px;
+  }
+  
+  
+  .testis-testimonial{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+  }
 }

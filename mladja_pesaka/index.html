@@ -9,8 +9,23 @@
     <link rel="stylesheet" href="main.css">
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+      window.addEventListener("load", ()=> {
+         const loader = document.querySelector(".loader");
+          document.querySelector(".loader").classList.add("loader--hidden");
+
+          document.querySelector(".loader").addEventListener("transitioned", ()=>{
+              document.body.removeChild(loader);
+          });
+      });
+  </script>
 </head>
 <body>
+  
     <header id="header" class="header">
         <div class="container">
     
@@ -24,20 +39,21 @@
           
             <div class="hamburger-menu">
               <button class="hamburger">☰</button>
-              <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a class="get" href="get-a-quote.html">Get Full Report</a></li>
-              </ul>
+              <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+                <a class="get" href="get-a-quote.html">Get Full Report</a>
+              </div>
             </div>
           
-    
+            <div class="loader"></div>
         </div>
       </header><!-- End Header -->
         <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero d-flex align-items-center">
+    
     <div class="container2">
       <div class="herocnt">
         <div class="herocntmain">
@@ -82,18 +98,10 @@
 
     <!-- ======= Featured Services Section ======= -->
      <!-- ======= Featured Services Section ======= -->
-     <section id="featured-services" class="featured-services">
-      <div class="container">
-
-        <div class="row gy-4">
-
-        </div>
-
-      </div>
-    </section><!-- End Featured Services Section -->
+     
 
     <!-- ======= About Us Section ======= -->
-    <section id="about" class="about pt-0">
+    <section id="about" class="about reveal">
       <div class="container" data-aos="fade-up">
 
         <div class="wrp">
@@ -120,7 +128,7 @@
     </section><!-- End About Us Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="service" class="service">
+    <section id="service" class="service reveal">
       <div class="services">
 
         <div class="section-header">
@@ -172,9 +180,9 @@
     <section id="features" class="features">
       <div class="servcont">
 
-        <div class="fet1" data-aos="fade-up">
+        <div class="fet1 reveal">
 
-          <div class="col-md-5">
+          <div class="imges">
             <img src="img/features1.png" class="img-fluid" alt="">
           </div>
           <div class="sub">
@@ -194,8 +202,8 @@
           </div>
         </div><!-- Features Item -->
 
-        <div class="fet2" data-aos="fade-up">
-          <div class="col-md-5 order-1 order-md-2">
+        <div class="fet2 reveal">
+          <div class="imges">
             <img src="img/features2.png" class="img-fluid" alt="">
           </div>
           <div class="sub">
@@ -214,8 +222,8 @@
           </div>
         </div><!-- Features Item -->
 
-        <div class="fet1" data-aos="fade-up">
-          <div class="col-md-5">
+        <div class="fet1 reveal">
+          <div class="imges">
             <img src="img/features3.png" class="img-fluid" alt="">
           </div>
           <div class="sub">
@@ -241,13 +249,13 @@
     </section><!-- End Features Section -->
 
     <!-- ======= Pricing Section ======= -->
-    <section class="pricing">
+    <section class="pricing reveal">
       <h1>PRICING</h1>
       <div class="coont">
       <div class="card-wrapper">
           <!-- card header -->
           <div class="card-header">
-                  <img src="../assets/img/cargo-service1.png" alt="">
+                  <img src="./img/cargo-service1.png" alt="">
                   <center><h2>SWOT</h2></center>
           </div>
 
@@ -266,7 +274,7 @@
       </div>
       <div class="card-wrapper">
           <div class="card-header">
-                  <img src="../assets/img/storage-service.jpg" alt="">
+                  <img src="./img/storage-service.jpg" alt="">
                   <center><h2>KPI</h2></center>
           </div>
           <div class="card-detail">
@@ -282,7 +290,7 @@
       </div>
       <div class="card-wrapper">
           <div class="card-header">
-                  <img src="../assets/img/logistics-service1.png" alt="">
+                  <img src="./img/logistics-service1.png" alt="">
                   <center><h2>Statistics</h2></center>
           </div>
           <div class="card-detail">
@@ -299,7 +307,7 @@
   </section>
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    <section id="testimonials" class="testimonials reveal">
       <div class="testis-hero">
         <h1>TESTIMONIALS</h1>
 
@@ -311,7 +319,7 @@
                 <span class="testis-btn"></span>
             </div>
             <div class="testis-testimonial">
-                    <div class="testis-slide-row" id="slide">
+              <div class="testis-slide-row" id="slide">
                 <div class="testis-slide-col">
                     <div class="testis-user-text">
                         <p>Sarah Samona is an American internet
@@ -415,100 +423,138 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq">
-      <div class="seccontainer" data-aos="fade-up">
-
-        <div class="section-header">
-          <span>Frequently Asked Questions</span>
-          <h2>Frequently Asked Questions</h2>
-
+    <section id="faq" class="faq reveal">
+      <div class="containerfaq">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="accordion">
+            <!-- <div class="icon"></div> -->
+            <!-- <ion-icon name="add-circle-outline" class="plus"></ion-icon> -->
+            <ion-icon name="caret-down-outline"></ion-icon>
+            <!-- <ion-icon name="remove-circle-outline" class="minus"></ion-icon> -->
+                <h5>What are the most important KPI I should consider?</h5>
+               
         </div>
-
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          <div class="col-lg-10">
-
-            <div class="accordion accordion-flush" id="faqlist">
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Non consectetur a erat nam at lectus urna duis?
-                  </button>
-                </h3>
-                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
-                  </button>
-                </h3>
-                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
-                  </button>
-                </h3>
-                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                  </button>
-                </h3>
-                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                    <i class="bi bi-question-circle question-icon"></i>
-                    Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-                  </button>
-                </h3>
-                <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                  <div class="accordion-body">
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                  </div>
-                </div>
-              </div><!-- # Faq item-->
-
-            </div>
-
-          </div>
+        <div class="panel">
+            <p>To je nesto zaista dosadno. Ukoliko zelite da se vise informisete
+                o tome sta je Lorem Ipsum potrebno je da upisete neki od tehnickih fakulteta.
+            </p>
         </div>
+        <div class="accordion">
+            <!-- <div class="icon"></div> -->
+            <ion-icon name="caret-down-outline"></ion-icon>
+                <h5>Which statistical methods are useful for benchmarking?</h5>
+               
+        </div>
+        <div class="panel">
+            <p>Oznacava neki obican tekst.</p>
+        </div>
+        <div class="accordion">
+            <!-- <div class="icon"></div> -->
+            <ion-icon name="caret-down-outline"></ion-icon>
+                <h5>How could I utilize my competition SWOT data?</h5>
+                
+        </div>
+        <div class="panel">
+            <p>Zato sto moramo da vezbamo kucanje.</p>
+        </div>
+        <div class="accordion">
+            <!-- <div class="icon"></div> -->
+            <ion-icon name="caret-down-outline"></ion-icon>
+                <h5>Which business strategies should I use after colecting the reports?</h5>
+               
+        </div>
+        <div class="panel">
+            <p>Uvek kada smo u prilici za racunarom.</p>
+        </div>
+   </div>
+  
+    
+   <script>
+        var acc=document.getElementsByClassName('accordion');
+        var i;
+        var len = acc.length;
+        for(i = 0;i<len;i++){
+            acc[i].addEventListener('click', function(){
+                this.classList.toggle('active');
+                var panel = this.nextElementSibling;
+                if(panel.style.maxHeight){
+                    panel.style.maxHeight = null;
+                } else{
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            })
+        } 
+    
 
-      </div>
+   </script>
     </section><!-- End Frequently Asked Questions Section -->
 
   </main><!-- End #main -->
+
+
+  <footer>
+    <div class="footerwrap">
+      <div class="bench">
+        <h2 class="ftname">Benchamrking</h2><br>
+        <p class="fttext">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi voluptatem eaque minus, ullam praesentium dolorem.
+        </p>
+        <div class="socialmedia"> 
+          <a class="sm" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="sm" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="sm" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="sm" href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a class="sm" href="#"><i class="fab fa-youtube"></i></a></div>
+        </div>
+      <div class="usefullinks">
+        <h4 class="usflname">Useful Links</h4><br>
+        <a href="index.html">Home</a><br>
+        <a href="#">About Us</a><br>
+        <a href="#">Services</a><br>
+        <a href="#">Terms of service</a><br>
+        <a href="#">Privacy policy</a>
+      </div>
+      <div class="ourservices">
+        <h4 class="oursername">Our Services</h4><br>
+        <a href="#">Web design</a><br>
+        <a href="#">Web dev</a><br>
+        <a href="#">asdasd</a><br>
+        <a href="#">adad</a><br>
+        <a href="#">dsdsd</a>
+      </div>
+    </div>
+    <div class="copyright"><h4>&copy;Copyright Altost.<span>All Rights Reserved</span></h4></div>
+  </footer>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    window.addEventListener('scroll', reveal);
+
+    function reveal(){
+        var reveals = document.querySelectorAll('.reveal');
+    
+
+    for(var i=0;i< reveals.length;i++){
+
+        var windowheight = window.innerHeight;
+        var revealtop = reveals[i].getBoundingClientRect().top;
+        var revealpoint = 150;
+
+        if(revealtop < windowheight - revealpoint){
+            reveals[i].classList.add('activerev');
+        }
+        else{
+            reveals[i].classList.remove('activerev');
+        }
+    }
+}
+
+</script>
 </body>
 
 </html>

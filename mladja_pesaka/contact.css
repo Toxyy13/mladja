@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Special Elite', cursive; 
+    
+
+}
+
+header{
+    width:100%;
+    color:white;
+    position:fixed;
+    top:0;
+    background-color:#0a366e;
+    height:100px;
+    z-index:100;
+    }
+    h1{
+      padding:25px;
+      font-size:2rem;
+      color:white;
+      text-align:center;
+    
+    }
+    .container{
+      width:100%;
+      display:flex;
+      justify-content: space-between;
+    }
+    .get{
+      background-color:#0d42ff;
+      padding:10px;
+      border-radius:5px;
+    }
+    /* Style the hamburger button */
+    .hamburger {
+      display: block;
+      background-color: transparent;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 25px;
+      font-weight: bold;
+      font-size:2rem;
+    }
+    
+    /* Style the menu */
+    .menu {
+      opacity: 0;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #0a366e;
+      color:white;
+      border-radius:0 0 10px 10px;
+      position: absolute;
+      top: 58px;
+      right: 0;
+      max-width:30%;
+      z-index: 1;position:absolute;
+      top:100px;
+    }
+    
+    .menu  a {
+      display: block;
+      color:white;
+      text-align: left;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size:2rem;
+    }
+    .menu a:hover{
+      color:rgb(116, 165, 208);
+    }
+    
+    
+    /* Change the background color of the active link */
+    .menu a.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    
+    /* Style the hamburger icon */
+    .hamburger span {
+      float: right;
+    }
+    .hamburger-menu .hamburger:focus + .menu {
+      opacity: 1;
+    }
+    
+.somesection{
+height: 60vh;
+background-color: bisque;
+background-image: url('./img/page-header2.jpeg');
+background-size: 100% 60%;
+background-repeat: no-repeat; 
+background-attachment: fixed;
+/* background-position:center; */
+
+position: relative;
+isolation: isolate;
+}
+
+.somesection::after{
+        content: '';
+        position: absolute;
+        background:rgb(0, 94, 255);
+        inset: 0;
+        z-index:-1;
+         opacity: 0.40;
+        
+}
+
+li{
+list-style: none;
+}
+
+a{
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-size: 1.5rem;
+}
+
+a:hover{
+color: rgb(99, 43, 21);
+}
+
+
+
+  /* RESPONSIVE DESIGN */
+  @media(max-width: 992px){
+.navbar .links,
+.navbar .action_btn{
+    display: none;
+}
+}
+
+.navbar .toogle_btn{
+display: block;
+}
+
+.dropdown_menu{
+display: block;
+}
+
+.video{
+margin-top: 5%;
+margin-left: 58%;
+width: 600px;
+height: 400px;
+
+}
+
+.hero{
+        width: 100%;
+        height: 65vh;
+        background-image: /*linear-gradient(rgba(0,0,0,0.5), lightblue),*/ url(./img/page-header1.png);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-attachment: fixed;
+        position: relative;
+        isolation: isolate;
+    }
+
+  .hero::after{
+    content: '';
+        position: absolute;
+        background:  rgb(0, 51, 255);
+        inset: 0;
+        z-index:-1;
+         opacity: 0.40;
+  }
+
+ .col4 {
+  padding-top: 20px;
+  padding-left: 100px;
+  font-size:x-large;
+  font-weight:bolder;
+  
+ }
+
+    form{
+        width: 90%;
+        max-width: 800px;
+        
+    }
+
+    .input-group{
+        margin-bottom: 30px;
+        position: relative;
+        
+    }
+
+    input, textarea{
+        width: 100%;
+        padding: 10px;
+         outline: 0;
+         
+        border: 1px solid #fff;
+        color: #fff;
+        
+        background: transparent;
+        font-size: 15px; 
+    }
+
+    label{
+        height: 100%;
+         position: absolute;
+        left: 0;
+        top: 0;
+        
+        padding: 10px;
+        color:white;
+        font-weight: bold;
+        cursor: text; 
+        transition: 0.5s;
+    } 
+
+    button{
+        padding: 10px 0;
+        color: white;
+        outline: none;
+        background: transparent;
+        border: 1px solid white;
+        width: 100%;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+
+    input:focus~label,
+    input:valid~label,
+    textarea:focus~label,
+    textarea:valid~label{
+        top: -35px;
+        font-size: 14px;
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .row .input-group{
+        flex-basis: 48%;
+    }
+
+    button{
+      border-radius: 20px;
+      transition: 0.5s;
+      
+    }
+
+    button:hover{
+      background-color: rgb(0, 51, 255);
+      
+    }
+    button:active{
+      font-size: large;
+    }
+    .mapa{
+        width: 100%;
+    }
